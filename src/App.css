@@ -28,3 +28,14 @@
 .keyword-item::after {
   content: "\""
 }
+
+.path-item {
+  margin: 0 5px;
+  text-decoration: none;
+  color: #1E88E5;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.path-item:hover {
+  border-bottom: solid 1px;
+}
