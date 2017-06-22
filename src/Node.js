@@ -19,10 +19,8 @@ export default class Node extends React.Component {
         return (
             <div className="node" id={data.name}>
                 <p className="name"><span>{id}</span> {data.name}</p>
-                <p>Path: {path.map((v, i) => (<a key={i} href={`#${v.name}`} className="path-item">{v.name}</a>))}</p>
-                {hasDesc ? <p>
-                    Description:<span className="desc">{data.desc}</span>
-                </p> : null}
+                <p>Navigation {path.map((v, i) => (<a key={i} href={`#${v.name}`} className="path-item">{v.name}</a>))}</p>
+                {hasDesc ? <p className="desc">{data.desc}</p> : null}
                 {hasKeys ? <p>Keyword: {data.keys.map((v, i) => (<span key={i} className="keyword-item">{v}</span>))}</p> : null}
                 {hasBeginEnd ? <p>See Also: from {data.begin} to {data.end}</p> : null}
                 {hasChildren ?
